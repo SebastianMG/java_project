@@ -8,12 +8,15 @@ class Case2 extends Menu_switch {
     {
     about = "Deleting all whitespaces: \n  ";
     }
+	//static String f=Ask.InputFile();
 	public static void Edit(){
 		FileReader pl=null;
 		String sCurrentLine="";
-		System.out.println("Input file:\n\n");
+		System.out.println("Input file:\n");
 		try{
+		//pl = new FileReader(f);
 		pl = new FileReader("src/data");
+
 	} catch (FileNotFoundException e) {
 	       System.out.println("Opening file error!");
 	       System.exit(1);
@@ -42,13 +45,16 @@ class Case2 extends Menu_switch {
         System.out.println(about);
         Edit();
 		try{
+			//Save(f);
 			Save("src/data");
+
 		}
 		catch(IOException e){
 			e.printStackTrace();
 		}
-        System.out.println("Output file:\n\n");
+        System.out.println("Output file:\n");
         try{
+        	//Print(f);
         	Print("src/data");
         }
         catch(IOException e){
